@@ -1,5 +1,5 @@
-// Main program file
+// Entry point
+import {createPicturesArray} from './data.js';
+import {drawPictures} from './draw.js';
 
-import {createPhotosArray} from './data';
-
-createPhotosArray(25);
+drawPictures(createPicturesArray(25));
