@@ -1,4 +1,5 @@
 // Draw elements module
+//Задание 7 часть 2
 const generatePictureDOM = function (picture) {
   const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture').cloneNode(true);
 
