@@ -1,12 +1,12 @@
 // Upload image form validation, handlers etc module
 import '../pristine/pristine.min.js';
 import {isDescriptionValid} from './util.js';
-import {showImageUploadOverlay, hideImageUploadOverlay, showSuccessMessage} from './img-upload-overlay.js';
+import {showImageOverlay, hideImageOverlay, showSuccessMessage} from './img-overlay.js';
 import {form} from './main.js';
 
-export const imageUploadFormValidate = function () {
+export const imageFormValidate = function () {
   form.querySelector('#upload-file').addEventListener('change', () => {
-    showImageUploadOverlay();
+    showImageOverlay();
   });
   form.method = 'POST';
   form.action = 'https://27.javascript.pages.academy/kekstagram-simple';
@@ -23,7 +23,7 @@ export const imageUploadFormValidate = function () {
   form.addEventListener('submit', (evt) => {
     evt.preventDefault();
     if (pristine.validate()) {
-      hideImageUploadOverlay();
+      hideImageOverlay();
       showSuccessMessage();
     }
   });

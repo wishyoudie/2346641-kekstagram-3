@@ -4,16 +4,16 @@ import {addHideHandler} from './util.js';
 
 const overlay = document.querySelector('.img-upload__overlay');
 
-export const hideImageUploadOverlay = function () {
+export const hideImageOverlay = function () {
   overlay.classList.add('hidden');
   document.body.classList.remove('modal-open');
   form.reset();
 };
 
-export const showImageUploadOverlay = function () {
+export const showImageOverlay = function () {
   overlay.classList.remove('hidden');
   document.body.classList.add('modal-open');
-  addHideHandler('#upload-cancel', hideImageUploadOverlay);
+  addHideHandler('#upload-cancel', hideImageOverlay);
 };
 
 
