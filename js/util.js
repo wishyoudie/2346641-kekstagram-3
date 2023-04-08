@@ -1,6 +1,6 @@
 // Utility funtions
 
-const getRandomInteger = function (left, right) {
+export const getRandomInteger = function (left, right) {
   if (right < left || left < 0) {
     throw new Error(`Invalid parameters given: ${  left  }, ${  right}`);
   }
@@ -11,8 +11,19 @@ const getRandomInteger = function (left, right) {
   return Math.floor(left + (right - left + 1) * Math.random());
 };
 
-const lengthFits = function (str, len) {
+export const lengthFits = function (str, len) {
   return (str.length <= len);
 };
 
-export {getRandomInteger, lengthFits};
+export const isDescriptionValid = function (value) {
+  return value.length >= 20 && value.length <= 140;
+};
+
+export const addHideHandler = function (className, hideHandler) {
+  document.querySelector(className).addEventListener('click', hideHandler);
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape') {
+      hideHandler();
+    }
+  });
+};
