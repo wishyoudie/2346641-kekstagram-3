@@ -1,6 +1,6 @@
 // Draw elements module
-//Задание 7 часть 2
-const generatePictureDOM = function (picture) {
+
+const generatePictureElement = function (picture) {
   const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture').cloneNode(true);
 
   const pictureImageContainer = pictureTemplate.querySelector('.picture__img');
@@ -15,7 +15,7 @@ const generatePictureDOM = function (picture) {
 
 
 const drawPicture = function (picture) {
-  const pictureElement = generatePictureDOM(picture);
+  const pictureElement = generatePictureElement(picture);
   const picturesList = document.querySelector('.pictures');
   picturesList.appendChild(pictureElement);
 };
@@ -25,4 +25,4 @@ const drawPictures = function (pictures) {
 };
 
 
-export {drawPictures};
+export {drawPicture, drawPictures};
