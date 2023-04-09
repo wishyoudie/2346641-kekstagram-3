@@ -14,12 +14,12 @@ export const resetImageScale = function () {
 };
 
 const buttonSmallerListener = function() {
-  const nval = Math.max(0, parseInt(scaleControlContainer.value) - 25);
+  const nval = Math.max(0, parseFloat(scaleControlContainer.value) - 25);
   setScaleValue(nval);
 };
 
 const buttonBiggerListener = function() {
-  const nval = Math.min(100, parseInt(scaleControlContainer.value) + 25);
+  const nval = Math.min(100, parseFloat(scaleControlContainer.value) + 25);
   setScaleValue(nval);
 };
 
