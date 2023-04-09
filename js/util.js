@@ -19,8 +19,8 @@ export const isDescriptionValid = function (value) {
   return value.length >= 20 && value.length <= 140;
 };
 
-export const addHideHandler = function (className, hideHandler) {
-  document.querySelector(className).addEventListener('click', hideHandler);
+export const addHideHandler = function (element, hideHandler) {
+  element.addEventListener('click', hideHandler);
   document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape') {
       hideHandler();
