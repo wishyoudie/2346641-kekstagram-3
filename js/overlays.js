@@ -6,6 +6,7 @@ import {initImageEffects, resetImageEffects} from './img-effects.js';
 
 const overlay = document.querySelector('.img-upload__overlay');
 const hideOverlayButton = document.querySelector('#upload-cancel');
+const submitButton = document.querySelector('.img-upload__submit');
 
 export const hideImageOverlay = function () {
   form.reset();
@@ -23,6 +24,13 @@ export const showImageOverlay = function () {
   initImageEffects();
 };
 
+export const unblockSubmitButton = function () {
+  submitButton.disabled = false;
+};
+
+export const blockSubmitButton = function () {
+  submitButton.disabled = true;
+};
 
 const hideSuccessMessage = function () {
   const message = document.querySelector('.success');
@@ -33,4 +41,15 @@ export const showSuccessMessage = function () {
   const message = document.querySelector('#success').content.cloneNode(true);
   document.body.appendChild(message);
   addHideHandler(document.querySelector('.success__button'), hideSuccessMessage);
+};
+
+const hideErrorMessage = function () {
+  const message = document.querySelector('.error');
+  document.body.removeChild(message);
+};
+
+export const showErrorMessage = function () {
+  const message = document.querySelector('#error').content.cloneNode(true);
+  document.body.appendChild(message);
+  addHideHandler(document.querySelector('.error__button'), hideErrorMessage);
 };
