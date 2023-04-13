@@ -29,10 +29,11 @@ export const validateForm = function () {
     evt.preventDefault();
     if (pristine.validate()) {
       blockSubmitButton();
-
-      postData(new FormData(evt.target), showSuccessMessage, showErrorMessage);
-      unblockSubmitButton();
-      hideImageOverlay();
+      postData(new FormData(evt.target),
+        showSuccessMessage,
+        showErrorMessage,
+        () => {unblockSubmitButton(); hideImageOverlay();}
+      );
     }
   });
 };
