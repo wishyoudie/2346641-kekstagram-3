@@ -1,11 +1,8 @@
 // Upload image overlay logic module
-import {form, overlay} from './elements.js';
+import {form, overlay, submitButton, hideOverlayButton} from './elements.js';
 import {addHideHandler} from './util.js';
 import {initImageScale, resetImageScale} from './img-scale.js';
 import {resetImageEffects} from './img-effects.js';
-
-const hideOverlayButton = document.querySelector('#upload-cancel');
-const submitButton = document.querySelector('.img-upload__submit');
 
 export const hideImageOverlay = function () {
   form.reset();
