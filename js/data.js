@@ -1,5 +1,5 @@
 // Create and manage data functions
-import { getRandomInteger } from './util.js';
+import {getRandomInteger} from './util.js';
 
 const createPicturesArray = function (numberOfPictures) {
   const res = [];

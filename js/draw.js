@@ -13,7 +13,6 @@ const generatePictureElement = function (picture) {
   return pictureTemplate;
 };
 
-
 const drawPicture = function (picture) {
   const pictureElement = generatePictureElement(picture);
   const picturesList = document.querySelector('.pictures');
@@ -23,6 +22,5 @@ const drawPicture = function (picture) {
 const drawPictures = function (pictures) {
   pictures.forEach((picture) => {drawPicture(picture);});
 };
-
 
 export {drawPicture, drawPictures};
