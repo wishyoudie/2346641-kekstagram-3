@@ -19,7 +19,6 @@ const pristine = new Pristine(form, {
   errorTextTag: 'span'
 });
 
-// add hashtag validation
 pristine.addValidator(
   form.querySelector('.text__description'),
   isDescriptionValid,
