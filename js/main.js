@@ -1,9 +1,7 @@
 // Entry point
-import {drawPictures} from './draw.js';
-import {validateForm} from './form.js';
+import './elements.js';
+import './form.js';
 import {getData} from './api.js';
+import {drawPictures} from './draw.js';
 
-export const form = document.querySelector('#upload-select-image');
-
-validateForm();
 getData(drawPictures);

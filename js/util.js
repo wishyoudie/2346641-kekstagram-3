@@ -27,3 +27,26 @@ export const addHideHandler = function (element, hideHandler) {
     }
   });
 };
+
+export const getEffectString = function (effect, nval) {
+  switch (effect) {
+    case 'chrome': {
+      return `grayscale(${nval})`;
+    }
+    case 'sepia': {
+      return`sepia(${nval})`;
+    }
+    case 'marvin': {
+      return `invert(${nval}%)`;
+    }
+    case 'phobos': {
+      return `blur(${nval * 3}px)`;
+    }
+    case 'heat': {
+      return `brightness(${nval * 3})`;
+    }
+    default: {
+      return '';
+    }
+  }
+};
